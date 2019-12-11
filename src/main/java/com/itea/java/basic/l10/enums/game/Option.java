@@ -6,7 +6,9 @@ public enum Option {
 
     ROCK,
     PAPER,
-    SCISSORS;
+    SCISSORS,
+
+    EXIT;
 
     private static final Random RANDOM = new Random();
 
@@ -23,6 +25,6 @@ public enum Option {
     }
 
     public static Option random() {
-        return values()[RANDOM.nextInt(values().length)];
+        return values()[RANDOM.nextInt(values().length - 1)];
     }
 }
